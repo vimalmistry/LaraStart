@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+//        \Auth::user()->assignRole(2,450);
+        \Auth::user()->hasPermission('manage.adminPanel');
+
+//        dd($res);
         return view('home');
     }
 }

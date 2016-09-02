@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-use DebugBar\DebugBar;
+//use DebugBar\DebugBar;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Session;
 use Illuminate\Http\Request;
-
+use App\Logic\User\CaptureIp;
 
 use App\Traits\CaptchaTrait;
 
@@ -136,6 +136,10 @@ class RegisterController extends Controller
         }
         $user->activation_token = $activation_code;
 
+
+        // GET IP ADDRESS
+        $userIpAddress = new CaptureIp;
+        $user->register_ip = $userIpAddress->getClientIp();
 
         $user->status = 'pendingActivation';
 

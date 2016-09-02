@@ -40,6 +40,15 @@ Route::get('manage/profile','Manage\ProfileController@showProfile');
 
 
 
+Route::group(['prefix'=>'example'],function(){
+
+    //Datatable Example
+    Route::get('/datatable','Example\DataTableController@showDatatables');
+    Route::get('/datatable/anyData','Example\DataTableController@anyData');
+
+});
+
+
 Route::get('/data','Manage\ProfileController@showDatatables');
 Route::get('/anyData','Manage\ProfileController@anyData');
 

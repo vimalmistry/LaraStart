@@ -1,28 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Manage;
+namespace App\Http\Controllers\Example;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+
 use App\User;
 use Yajra\Datatables\Datatables;
 
-class ProfileController extends Controller
+class DataTableController extends Controller
 {
-
-
-    public function showProfile(Request $request)
-    {
-        return \Auth::user();
-    }
-
-
     public function showDatatables()
     {
-        return view('data');
+        return view('example.datatables');
     }
 
 
