@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "vimalmistry/larastart",
+    "description": "The Laravel Framework Starter.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
