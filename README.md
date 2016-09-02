@@ -1,0 +1,2 @@
+# LaraStart
+Laravel Starter
