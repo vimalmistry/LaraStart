@@ -1,8 +1,8 @@
 # LaraStart
 Laravel Starter
 
-# Fetures
+### Fetures
 Cooming Soon
 
-# Docs
+### Docs
 Comming Soon
