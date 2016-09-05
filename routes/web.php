@@ -49,9 +49,11 @@ Route::group(['prefix'=>'example'],function(){
 });
 
 
-Route::get('/data','Manage\ProfileController@showDatatables');
-Route::get('/anyData','Manage\ProfileController@anyData');
+Route::group(['prefix'=>'cpanel','middleware'=>'auth','namespace'=>'Cpanel'],function(){
 
+    Route::get('/','DashboardController@index');
+
+});
 
 //
 //Route::controller('datatables', 'Manage\ProfileController', [

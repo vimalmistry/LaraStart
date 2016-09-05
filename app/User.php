@@ -110,7 +110,7 @@ class User extends Authenticatable
         if (!$this->roles()->contains($role)) {
 //            return $this->roles()->attach($role)
             //attach bcoz we have many roles
-            return $this->roles()->attach($role,['by_id' => $by_id]);
+            return $this->roles()->attach($role, ['by_id' => $by_id]);
         }
 //        return $this->roles()->sync([$role=>['role'=>$role]]);
     }
@@ -139,25 +139,22 @@ class User extends Authenticatable
      */
     public function hasPermission($permission)
     {
-        $object = \App\Permission::select('id')->where('slug','=',$permission)
-            ->with(['roles'=>function($q){
+        $object = \App\Permission::select('id')->where('slug', '=', $permission)
+            ->with(['roles' => function ($q) {
                 $q->select('name');
             }])
             ->first();
 
-        if(!$object)
-        {
+        if (!$object) {
             return false;
         }
 
-//        return $object;
 
-        $permission_id = $object->id;
+//        $permission_id = $object->id;
 
-//        $userRoles = \Auth::user()->roles()->toArray();
+        foreach ($object->roles as $role) {
 
-        foreach ($this->roles()->select('name')->get() as $role) {
-            if($this->hasRole($role->name)) return true;
+            if ($this->hasRole($role->name)) return true;
         }
 
         return false;
@@ -179,7 +176,6 @@ class User extends Authenticatable
     }
 
 
-
     /**
      * Has One Country
      *
@@ -187,7 +183,7 @@ class User extends Authenticatable
      */
     public function country()
     {
-        return $this->hasOne('App\Country','code','country');
+        return $this->hasOne('App\Country', 'code', 'country');
     }
 
 }
