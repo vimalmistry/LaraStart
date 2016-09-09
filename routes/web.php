@@ -55,8 +55,14 @@ Route::group(['prefix'=>'cpanel','middleware'=>'auth','namespace'=>'Cpanel'],fun
 
 });
 
+Route::resource('example-crud', 'ExampleCrudController');
+
+
 //
 //Route::controller('datatables', 'Manage\ProfileController', [
 //    'anyData'  => 'datatables.data',
 //    'getIndex' => 'datatables',
 //]);
+
+Route::resource('posts', 'PostsController');
+Route::resource('example-crud', 'ExampleCrudController');

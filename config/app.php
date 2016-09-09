@@ -201,6 +201,8 @@ return [
 
         Yajra\Datatables\DatatablesServiceProvider::class,
 
+        //https://github.com/appzcoder/crud-generator
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
 
     ],
 

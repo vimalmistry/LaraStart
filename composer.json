@@ -13,7 +13,8 @@
         "barryvdh/laravel-debugbar": "^2.2",
         "laravel/socialite": "^2.0",
         "intervention/image": "^2.3",
-        "yajra/laravel-datatables-oracle": "^6.18"
+        "yajra/laravel-datatables-oracle": "^6.18",
+        "appzcoder/crud-generator": "^1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
