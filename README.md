@@ -21,4 +21,9 @@ Laravel Starter
 
 
 ### Docs
-- Comming Soon
+
+ - Installtion
+
+> `git clone https://github.com/vimalmistry/LaraStart.git`
+> `cd LaraStart` &&
+> `composer update`
