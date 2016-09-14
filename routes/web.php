@@ -22,6 +22,8 @@ Route::get('/', function () {
 
 Route::get('/logout', 'Auth\LoginController@logout');
 Auth::routes();
+Route::get('/login/check','Auth\LoginController@checkEmail');
+Route::get('/register/check','Auth\RegisterController@checkEmailExist');
 
 Route::get('/home', 'HomeController@index');
 

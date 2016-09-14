@@ -18,12 +18,82 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/adminlte/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="/adminlte/alertExtra.css">
 
     <style>
         .auth {
             margin-top: 15px;
         }
+
+        .rc-anchor-center-container
+        {
+            text-align: center;
+        }
+
+        .help-block
+        {
+            color: #dd4b39;
+        }
+
+        .content-wrapperxx
+        {
+
+
+
+
+/*Better*/
+            background: #4ECDC4; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #4ECDC4 , #556270); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #4ECDC4 , #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+            /*background: #348F50; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #348F50 , #56B4D3); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #348F50 , #56B4D3); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+
+            /*background: #83a4d4; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #83a4d4 , #b6fbff); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #83a4d4 , #b6fbff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+
+            /*background: #00bf8f; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #00bf8f , #001510); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #00bf8f , #001510); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+
+            /*background: #8e9eab; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #8e9eab , #eef2f3); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+
+            /*Perfact*/
+            /*background: #F1F2B5; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #F1F2B5 , #135058); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #F1F2B5 , #135058); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+/*Good*/
+            /*background: #c2e59c; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #c2e59c , #64b3f4); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #c2e59c , #64b3f4); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+
+            /*background: #2980b9; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #2980b9 , #2c3e50); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #2980b9 , #2c3e50); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+        }
+
     </style>
+
+    @yield('ExtraHeader')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,8 +108,21 @@
 
     <!-- Full Width Column -->
     <div class="content-wrapper">
+
+
         <div class="container">
-            <!-- Content Header (Page header) -->
+
+            @if (session()->has('flash_notification.message'))
+                <div class="notice notice-{{ session('flash_notification.level') }}">
+                    <button type="button" class="close" data-dismiss="notice" aria-hidden="true">&times;</button>
+
+                    {!! session('flash_notification.message') !!}
+                </div>
+                @endif
+
+
+
+                        <!-- Content Header (Page header) -->
             {{--<section class="content-header">--}}
                 {{--<h1>--}}
                     {{--Top Navigation--}}
@@ -62,16 +145,16 @@
         <!-- /.container -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.3.5
-            </div>
-            <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-            reserved.
-        </div>
-        <!-- /.container -->
-    </footer>
+    {{--<footer class="main-footer">--}}
+        {{--<div class="container">--}}
+            {{--<div class="pull-right hidden-xs">--}}
+                {{--<b>Version</b> 2.3.5--}}
+            {{--</div>--}}
+            {{--<strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights--}}
+            {{--reserved.--}}
+        {{--</div>--}}
+        {{--<!-- /.container -->--}}
+    {{--</footer>--}}
 </div>
 <!-- ./wrapper -->
 
@@ -84,8 +167,13 @@
 <!-- FastClick -->
 <script src="/adminlte/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
+{{--Vimal--}}
+<script src="/adminlte/libs/validator.min.js"></script>
+
 <script src="/adminlte/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/adminlte/dist/js/demo.js"></script>
+
+@yield('ExtraFooter')
 </body>
 </html>

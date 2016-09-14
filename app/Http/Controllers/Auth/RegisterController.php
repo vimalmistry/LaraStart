@@ -250,4 +250,24 @@ class RegisterController extends Controller
     }
 
 
+    /**
+     * For Ajax Request
+     *
+     * @param Request $request
+     * @return array
+     */
+    public function checkEmailExist(Request $request)
+    {
+
+        $email = $request->get('email');
+        if(User::where('email','=',$email)->first())
+        {
+            return abort(404);
+        }
+
+        return ['status'=>true];
+
+    }
+
+
 }
