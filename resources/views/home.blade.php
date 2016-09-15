@@ -2,76 +2,7 @@
 
 @section('content')
 
-    <div class="container">
 
-    <div class="jumbotron">
-        <h1>Jumbotron</h1>
-        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-    </div>
-
-
-        <div class="row">
-
-            <div class="col-md-12">
-                <table class="table table-striped table-hover ">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Column heading</th>
-                        <th>Column heading</th>
-                        <th>Column heading</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    <tr class="info">
-                        <td>3</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    <tr class="success">
-                        <td>4</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    <tr class="danger">
-                        <td>5</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    <tr class="warning">
-                        <td>6</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    <tr class="active">
-                        <td>7</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-        </div>
 
 
     <div class="row">
@@ -99,7 +30,122 @@
 
                 </div>
             </div>
+            <div class="panel">
+                <div class="panel-body">
+                    <!-- Newsfeed Content -->
+                    <!--===================================================-->
+                    <div class="media-block">
+                        <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
+                        <div class="media-body">
+                            <div class="mar-btm">
+                                <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
+                                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+                            </div>
+                            <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            <div class="pad-ver">
+                                <div class="btn-group">
+                                    <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                    <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                </div>
+                                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                            </div>
+                            <hr>
+
+                            <!-- Comments -->
+                            <div>
+                                <div class="media-block">
+                                    <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
+                                    <div class="media-body">
+                                        <div class="mar-btm">
+                                            <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>
+                                            <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 7 min ago</p>
+                                        </div>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                        <div class="pad-ver">
+                                            <div class="btn-group">
+                                                <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> You Like it</a>
+                                                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                            </div>
+                                            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <div class="media-block">
+                                    <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="http://bootdey.com/img/Content/avatar/avatar3.png">
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="mar-btm">
+                                            <a href="#" class="btn-link text-semibold media-heading box-inline">Lucy Moon</a>
+                                            <p class="text-muted text-sm"><i class="fa fa-globe fa-lg"></i> - From Web - 2 min ago</p>
+                                        </div>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate ?</p>
+                                        <div class="pad-ver">
+                                            <div class="btn-group">
+                                                <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                            </div>
+                                            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--===================================================-->
+                    <!-- End Newsfeed Content -->
+
+
+                    <!-- Newsfeed Content -->
+                    <!--===================================================-->
+                    <div class="media-block pad-all">
+                        <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
+                        <div class="media-body">
+                            <div class="mar-btm">
+                                <a href="#" class="btn-link text-semibold media-heading box-inline">John Doe</a>
+                                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <img class="img-responsive thumbnail" src="http://lorempixel.com/400/300/technics/1" alt="Image">
+                            <div class="pad-ver">
+                                <span class="tag tag-sm"><i class="fa fa-heart text-danger"></i> 250 Likes</span>
+                                <div class="btn-group">
+                                    <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                    <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                </div>
+                                <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                            </div>
+                            <hr>
+
+                            <!-- Comments -->
+                            <div>
+                                <div class="media-block pad-all">
+                                    <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
+                                    <div class="media-body">
+                                        <div class="mar-btm">
+                                            <a href="#" class="btn-link text-semibold media-heading box-inline">Maria Leanz</a>
+                                            <p class="text-muted text-sm"><i class="fa fa-globe fa-lg"></i> - From Web - 2 min ago</p>
+                                        </div>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate ?</p>
+                                        <div>
+                                            <div class="btn-group">
+                                                <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                                <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                            </div>
+                                            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--===================================================-->
+                    <!-- End Newsfeed Content -->
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
 @endsection

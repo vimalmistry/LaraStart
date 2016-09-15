@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,71 +18,72 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/adminlte/dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="/adminlte/alertExtra.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
     <style>
+
+        body, .box-title, .sidebar-menu > span {
+            font-family: 'PT Sans', sans-serif;
+
+            /*font-family: 'Open Sans';*/
+            font-weight: normal;
+        }
+
+
         .auth {
             margin-top: 15px;
         }
 
-        .rc-anchor-center-container
-        {
+        .rc-anchor-center-container {
             text-align: center;
         }
 
-        .help-block
-        {
+        .help-block {
             color: #dd4b39;
         }
 
-        .content-wrapperxx
-        {
+         .content-header,.content {
+             padding: 0px;
+             padding-top: 15px;
 
+         }
 
+        .content-wrapper {
 
+            background: #E4E6E9;
 
-/*Better*/
-            background: #4ECDC4; /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #4ECDC4 , #556270); /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #4ECDC4 , #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+            /*Better*/
+            /*background: #4ECDC4; !* fallback for old browsers *!*/
+            /*background: -webkit-linear-gradient(to left, #4ECDC4, #556270); !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to left, #4ECDC4, #556270); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
             /*background: #348F50; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #348F50 , #56B4D3); !* Chrome 10-25, Safari 5.1-6 *!*/
             /*background: linear-gradient(to left, #348F50 , #56B4D3); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-
-
             /*background: #83a4d4; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #83a4d4 , #b6fbff); !* Chrome 10-25, Safari 5.1-6 *!*/
             /*background: linear-gradient(to left, #83a4d4 , #b6fbff); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-
-
 
             /*background: #00bf8f; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #00bf8f , #001510); !* Chrome 10-25, Safari 5.1-6 *!*/
             /*background: linear-gradient(to left, #00bf8f , #001510); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-
-
             /*background: #8e9eab; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); !* Chrome 10-25, Safari 5.1-6 *!*/
             /*background: linear-gradient(to left, #8e9eab , #eef2f3); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-
-
             /*Perfact*/
-            /*background: #F1F2B5; !* fallback for old browsers *!*/
+            /*background: rgba(199, 229, 255, 0.4); !* fallback for old browsers *!*/
+            /*background: #e1f2ef; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #F1F2B5 , #135058); !* Chrome 10-25, Safari 5.1-6 *!*/
             /*background: linear-gradient(to left, #F1F2B5 , #135058); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-
-/*Good*/
+            /*Good*/
             /*background: #c2e59c; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #c2e59c , #64b3f4); !* Chrome 10-25, Safari 5.1-6 *!*/
             /*background: linear-gradient(to left, #c2e59c , #64b3f4); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-
-
 
             /*background: #2980b9; !* fallback for old browsers *!*/
             /*background: -webkit-linear-gradient(to left, #2980b9 , #2c3e50); !* Chrome 10-25, Safari 5.1-6 *!*/
@@ -95,7 +95,7 @@
 
     @yield('ExtraHeader')
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -106,9 +106,11 @@
 <body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
 
+
     <!-- Full Width Column -->
     <div class="content-wrapper">
 
+        @include('partials.navbar')
 
         <div class="container">
 
@@ -121,39 +123,38 @@
                 @endif
 
 
-
                         <!-- Content Header (Page header) -->
-            {{--<section class="content-header">--}}
+                {{--<section class="content-header">--}}
                 {{--<h1>--}}
-                    {{--Top Navigation--}}
-                    {{--<small>Example 2.0</small>--}}
+                {{--Top Navigation--}}
+                {{--<small>Example 2.0</small>--}}
                 {{--</h1>--}}
                 {{--<ol class="breadcrumb">--}}
-                    {{--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>--}}
-                    {{--<li><a href="#">Layout</a></li>--}}
-                    {{--<li class="active">Top Navigation</li>--}}
+                {{--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>--}}
+                {{--<li><a href="#">Layout</a></li>--}}
+                {{--<li class="active">Top Navigation</li>--}}
                 {{--</ol>--}}
-            {{--</section>--}}
+                {{--</section>--}}
 
-            <!-- Main content -->
-            <section class="content">
+                        <!-- Main content -->
+                <section class="content">
 
-                @yield('content')
-            </section>
-            <!-- /.content -->
+                    @yield('content')
+                </section>
+                <!-- /.content -->
         </div>
         <!-- /.container -->
     </div>
     <!-- /.content-wrapper -->
     {{--<footer class="main-footer">--}}
-        {{--<div class="container">--}}
-            {{--<div class="pull-right hidden-xs">--}}
-                {{--<b>Version</b> 2.3.5--}}
-            {{--</div>--}}
-            {{--<strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights--}}
-            {{--reserved.--}}
-        {{--</div>--}}
-        {{--<!-- /.container -->--}}
+    {{--<div class="container">--}}
+    {{--<div class="pull-right hidden-xs">--}}
+    {{--<b>Version</b> 2.3.5--}}
+    {{--</div>--}}
+    {{--<strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights--}}
+    {{--reserved.--}}
+    {{--</div>--}}
+    {{--<!-- /.container -->--}}
     {{--</footer>--}}
 </div>
 <!-- ./wrapper -->

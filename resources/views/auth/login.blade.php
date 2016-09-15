@@ -20,9 +20,9 @@
                 {{--<h3 class="text-center">Login</h3>--}}
 
 
-                <center>
-                    <h1 class="text-info"><b>< OrSpot ></b></h1>
-                </center>
+                {{--<center>--}}
+                    {{--<h1 class="text-info"><b>< OrSpot ></b></h1>--}}
+                {{--</center>--}}
 
                 <div class="panel panel-default">
                     <div class="panel-heading">Login</div>
@@ -31,7 +31,7 @@
                         @if (count($errors) > 0)
                             <div class="notice notice-danger">
 
-                                <strong>Error : </strong>
+                                <strong>Oops! : </strong>
                                 Please check the form and resubmit.
 
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">

@@ -204,6 +204,8 @@ return [
         //https://github.com/appzcoder/crud-generator
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
 
+        Laravel\Scout\ScoutServiceProvider::class,
+
     ],
 
     /*

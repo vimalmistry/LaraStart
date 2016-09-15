@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ExampleCrud extends Model
 {
+    use Searchable;
     /**
      * The database table used by the model.
      *
