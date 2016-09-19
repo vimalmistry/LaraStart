@@ -49,6 +49,13 @@ Route::group(['prefix'=>'example'],function(){
     Route::get('/datatable','Example\DataTableController@showDatatables');
     Route::get('/datatable/anyData','Example\DataTableController@anyData');
 
+
+    //File Upload
+
+    Route::get('/upload','Example\FileUploadController@imageUpload');
+    Route::post('/upload','Example\FileUploadController@doImageUpload');
+
+
 });
 
 
