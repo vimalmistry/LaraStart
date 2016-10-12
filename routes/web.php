@@ -16,6 +16,13 @@ use App\Mail\OrderShipped;
 
 Route::get('/', function () {
 
+
+//    $user = App\User::findOrFail($id);
+//
+//    $user->hide();
+//    return $user->toArray();
+
+
 //    \Mail::to('vimalmistry10@gmail.com')->send(new OrderShipped('Vimal Mitry'));
     return view('welcome');
 });
@@ -63,6 +70,16 @@ Route::group(['prefix'=>'cpanel','middleware'=>'auth','namespace'=>'Cpanel'],fun
 
     Route::get('/','DashboardController@index');
 
+
+
+    //Permission Crud
+    Route::get('/manage-permissions','PermissionController@index');
+    Route::get('/manage-permissions/data','PermissionController@data');
+    Route::get('/manage-permissions/create','PermissionController@create');
+    Route::post('/manage-permissions/create','PermissionController@store');
+//    Route::resource('manage-permission', 'PermissionController');
+
+
 });
 
 Route::resource('example-crud', 'ExampleCrudController');
@@ -75,4 +92,4 @@ Route::resource('example-crud', 'ExampleCrudController');
 //]);
 
 Route::resource('posts', 'PostsController');
-Route::resource('example-crud', 'ExampleCrudController');
+//Route::resource('example-crud', 'ExampleCrudController');

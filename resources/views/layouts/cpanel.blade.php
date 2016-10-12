@@ -18,7 +18,7 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/adminlte/dist/css/skins/_all-skins.min.css">
 
-    @yield('extraHeader')
+    @yield('ExtraHeader')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +27,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue-light sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -42,17 +42,17 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Blank page
-                <small>it all starts here</small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Examples</a></li>
-                <li class="active">Blank page</li>
-            </ol>
-        </section>
+        {{--<section class="content-header">--}}
+            {{--<h1>--}}
+                {{--Blank page--}}
+                {{--<small>it all starts here</small>--}}
+            {{--</h1>--}}
+            {{--<ol class="breadcrumb">--}}
+                {{--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>--}}
+                {{--<li><a href="#">Examples</a></li>--}}
+                {{--<li class="active">Blank page</li>--}}
+            {{--</ol>--}}
+        {{--</section>--}}
 
         <!-- Main content -->
         <section class="content">
@@ -89,7 +89,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/adminlte/dist/js/demo.js"></script>
 
-@yield('extraFooter')
+@yield('ExtraFooter')
 
 </body>
 </html>
