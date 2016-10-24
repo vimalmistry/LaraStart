@@ -18,7 +18,6 @@ class PermissionController extends Controller implements CrudInterface
     {
         // TODO: Implement index() method.
 
-
         return view('cpanel.manage-permissions.index');
     }
 
