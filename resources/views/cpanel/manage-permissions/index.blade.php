@@ -10,8 +10,10 @@
 
                     <div class="panel-body">
 
+                        <p>
                         <a href="{!! url('cpanel/manage-permissions/create') !!}" class="btn btn-success">Create Permission</a>
-
+                        </p>
+                        <hr>
 
                 <table class="table table-bordered" id="users-table">
                     <thead>

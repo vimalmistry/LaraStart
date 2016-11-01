@@ -57,7 +57,7 @@ trait RbacTraits
      */
     public function assignRole($role, $by_id = null)
     {
-        if (!$this->roles()->contains($role)) {
+        if (!$this->roles->contains($role)) {
 //            return $this->roles()->attach($role)
             //attach bcoz we have many roles
             return $this->roles()->attach($role, ['by_id' => $by_id]);

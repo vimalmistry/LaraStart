@@ -240,6 +240,11 @@ class RegisterController extends Controller
     public function accountIsActive($code)
     {
         $user = User::where('activation_token', '=', $code)->first();
+
+        if(!$user)
+        {
+            return true;
+        }
 //        dd($user);
         $user->status = 'active';
         $user->activation_token = null;

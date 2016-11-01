@@ -7,20 +7,25 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="/adminlte/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset("/adminlte/bootstrap/css/bootstrap.min.css") }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ asset("/adminlte/dist/css/AdminLTE.min.css") }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="/adminlte/dist/css/skins/_all-skins.min.css">
-    <link rel="stylesheet" href="/adminlte/alertExtra.css">
+    <link rel="stylesheet" href="{{ asset("/adminlte/dist/css/skins/_all-skins.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("/adminlte/alertExtra.css") }}">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
+    <style>
+        div.g-recaptcha {
+            margin: 0 auto;
+            width: 304px;
+        }
+    </style>
     <style>
 
         body, .box-title, .sidebar-menu > span {
@@ -49,9 +54,11 @@
 
          }
 
+
+
         .content-wrapper {
 
-            background: #E4E6E9;
+            /*background: #E4E6E9;*/
 
             /*Better*/
             /*background: #4ECDC4; !* fallback for old browsers *!*/
@@ -103,7 +110,7 @@
     <![endif]-->
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-blue layout-top-nav">
+<body class="hold-transition skin-black layout-top-nav">
 <div class="wrapper">
 
 
@@ -160,20 +167,20 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="/adminlte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="{{ asset("/adminlte/plugins/jQuery/jquery-2.2.3.min.js")}}"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="/adminlte/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ asset("/adminlte/bootstrap/js/bootstrap.min.js")}}"></script>
 <!-- SlimScroll -->
-<script src="/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="{{ asset("/adminlte/plugins/slimScroll/jquery.slimscroll.min.js")}}"></script>
 <!-- FastClick -->
-<script src="/adminlte/plugins/fastclick/fastclick.js"></script>
+<script src="{{ asset("/adminlte/plugins/fastclick/fastclick.js")}}"></script>
 <!-- AdminLTE App -->
 {{--Vimal--}}
-<script src="/adminlte/libs/validator.min.js"></script>
+<script src="{{ asset("/adminlte/libs/validator.min.js")}}"></script>
 
-<script src="/adminlte/dist/js/app.min.js"></script>
+<script src="{{ asset("/adminlte/dist/js/app.min.js")}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/adminlte/dist/js/demo.js"></script>
+<script src="{{ asset("/adminlte/dist/js/demo.js")}}"></script>
 
 @yield('ExtraFooter')
 </body>
